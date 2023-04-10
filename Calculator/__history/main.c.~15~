@@ -1,0 +1,148 @@
+#include <main.h>
+#include<keypad5x5.h>
+#include<lcd.h>
+
+
+int8 _CharToNumber (Char Key) 
+{
+   return (Key - '0') ;
+}
+   int8 entering_value = 0;
+   int8 first_value = 0;
+
+
+    
+    char flat ;
+void _ReturnStart (void) ;
+void main()
+{  
+    char Key = 'a' ;
+    lcd_init() ; //khoi tao lcd
+    lcd_putc('\f') ;//xoa trang man hinh lcd put char
+    
+    _KhoiTaoBanPhim() ;
+    
+    lcd_gotoxy(1,1) ;
+    printf(lcd_putc,"Calculator") ;
+    lcd_gotoxy(1,2) ;
+    printf(lcd_putc,Key) ;
+    delay_ms(1000) ;
+    lcd_putc('\f') ;
+    int8 entering_value = 0 ;
+    int8 first_value = 0 ;    
+   
+   lcd_gotoxy(1,1) ;
+   
+   while(TRUE)
+   {
+     Key = _QuetPhimNhan() ;
+     if(Key != 'a') {
+      if(Key == 'F') {
+         _ReturnStart() ;
+      }
+      if(Key >= '0' && Key <= '9') {
+         lcd_putc(key) ;
+         entering_value = entering_value*10 + _CharToNumber(Key) ;
+      }
+      if(Key == '+' || Key == '-' || Key == 'X' || Key == '/' || Key == '^' ) {
+      lcd_putc(Key) ;
+      
+      first_value = entering_value ;
+      entering_value = 0 ;
+      flat = Key ;
+      }
+      if(Key == '=') {
+         lcd_putc(Key) ;
+         lcd_gotoxy(1,2) ;
+         /*if(entering_value == 0) {
+            printf(lcd_putc,"Nhap lai") ;*/
+            
+         }
+         switch(flat) {
+         case '+': printf(lcd_putc,"= %d",first_value + entering_value) ;
+         break ;
+         case '-': printf(lcd_putc,"= %d",first_value - entering_value) ;
+         break ;
+         case 'X': printf(lcd_putc,"= %d",first_value * entering_value) ;
+         break ;
+         case '/':
+             if (entering_value == 0)
+             {
+                 printf(lcd_putc,"Error");
+             }
+             else
+             {
+                 printf(lcd_putc,"%d",first_value / entering_value) ;
+             }
+         case '^':
+             printf(lcd_putc,"%.0f", pow(first_value, entering_value));
+         break;
+        
+         
+         break ;
+         default : {
+            if(entering_value == 0) {
+            if(first_value != 0) {
+                        printf(lcd_putc,"KQ:%d",first_value) ;
+                        break ;
+                        }
+            printf(lcd_putc,"nhap lai") ; delay_ms(1000) ; break ;
+         }
+          
+         }
+        
+      }
+      
+      }
+      
+     }
+    
+     while(key != 'a') {
+      Key = _QuetPhimNhan() ;
+     }  
+    
+   }
+   
+}
+void _ReturnStart() {
+   lcd_putc('\f') ;
+   lcd_gotoxy(1,1) ;
+   
+   entering_value=0 ;
+   first_value=0 ;
+   flat='a' ;
+}
+   
+ /*     Key = _QuetPhimNhan() ;
+      if(Key != 0) {
+      
+          tam1=tam1*10+Key ;
+          lcd_gotoxy(1,1) ;
+          printf(lcd_putc,"%d",tam1) ;
+          
+          //1234 xac dung mot nut nao de chuyen so khac 
+          if(key == 6) {
+            tam2=( tam1 - Key )/10 ;
+            tam1 = 0 ;
+          }
+          
+          lcd_gotoxy(1,2) ;
+          printf(lcd_putc,"%d",tam2) ;
+          
+          if(Key ==7 ) {
+          lcd_gotoxy(5,2) ;
+          printf(lcd_putc,"%d",tam1+tam2) ;
+          }
+          
+          
+      }
+      
+       
+     
+     while(key != 0) {
+      Key = _QuetPhimNhan() ;
+     }            
+      //TODO: User Code
+   }
+   */
+

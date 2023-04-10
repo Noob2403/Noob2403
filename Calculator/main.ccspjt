@@ -1,0 +1,81 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.112
+Compiler=PCM
+CCSVersion=5.112
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[D:\Project KTMT\Calculator\main]
+Type=4
+[mru-list]
+1=main.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=2
+D1=08-04-2023
+D1_L=8
+D1_L1=[80219]Project Opened.
+D1_L2=[80347]Project Closed.
+D1_L3=[80361]Project Opened.
+D1_L4=[80387]Started Editing.
+D1_L5=[80705]Stopped Editing.
+D1_L6=[81893]Started Editing.
+D1_L7=[82344]Stopped Editing.
+TotalEdit=78
+TotalDebug=0
+D1_E=3
+D1_D=0
+D1_L8=[86239]Project Closed.
+D2=09-04-2023
+D2_L=24
+D2_L1=[44097]Project Opened.
+D2_L2=[44183]Started Editing.
+D2_L3=[45439]Stopped Editing.
+D2_L4=[45720]Started Editing.
+D2_L5=[46309]Stopped Editing.
+D2_L6=[47039]Started Editing.
+D2_L7=[49040]Stopped Editing.
+D2_L8=[51228]Started Editing.
+D2_L9=[51528]Stopped Editing.
+D2_L10=[52087]Started Editing.
+D2_L11=[52747]Stopped Editing.
+D2_L12=[52772]Started Editing.
+D2_L13=[53170]Stopped Editing.
+D2_L14=[53996]Started Editing.
+D2_L15=[54738]Stopped Editing.
+D2_L16=[57854]Started Editing.
+D2_L17=[58160]Stopped Editing.
+D2_L18=[59634]Started Editing.
+D2_L19=[60112]Stopped Editing.
+D2_L20=[60206]Started Editing.
+D2_L21=[60932]Stopped Editing.
+D2_L22=[83816]Started Editing.
+D2_L23=[83818]Stopped Editing.
+D2_E=75
+D2_D=0
+D2_L24=[83818]Project Closed.
+
+[Opened Files]
+1=main.c
+t1=85
+Count=3
+2=lcd.h
+t2=1
+3=keypad5x5.h
+t3=1
+4=keypad5x5.h
+t4=1
+[main.c]
+Type=4
+
+[defines]
+buildcount=31
+[Units]
+Count=1
+1=main (main)

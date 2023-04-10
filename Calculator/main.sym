@@ -1,0 +1,249 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @TRIS_C
+021-024 entering_value
+025-028 first_value
+029     flat
+02A-02B @sprintf_string
+02C     MAIN.Key
+02C-02F atan2.y
+02D-030 MAIN.entering_value
+030-033 atan2.x
+031-034 MAIN.first_value
+034-037 atan2.z
+035-038 MAIN.tru
+038.0   atan2.sign
+039     lcd_init.i
+039     _QuetPhimNhan.TenCot
+039     atan2.quad
+039-03C pow.x
+039     MAIN.@SCRATCH1
+039     @PSTRINGC7_870.@SCRATCH1
+039     @PSTRINGR_870.@SCRATCH1
+03A-052 _QuetPhimNhan.MaPhim
+03A     lcd_init.@SCRATCH1
+03A     MAIN.@SCRATCH2
+03A     @PSTRINGC7_870.@SCRATCH2
+03A     @PSTRINGR_870.@SCRATCH2
+03B     MAIN.@SCRATCH3
+03B     @PSTRINGC7_870.@SCRATCH3
+03C     MAIN.@SCRATCH4
+03C     @PSTRINGC7_870.@SCRATCH4
+03D-040 @PRINTF_L32D_870FPFPF.P1
+03D-040 pow.y
+03D     _CharToNumber.Key
+03D     MAIN.@SCRATCH5
+03E     MAIN.@SCRATCH6
+041-044 fmod.x
+041     @PRINTF_L32D_870FPFPF.P1
+041     pow.@SCRATCH1
+042     pow.@SCRATCH2
+042     @PRINTF_L32D_870FPFPF.@SCRATCH1
+043     pow.@SCRATCH3
+043     @PRINTF_L32D_870FPFPF.@SCRATCH2
+044     pow.@SCRATCH4
+044     @PRINTF_L32D_870FPFPF.@SCRATCH3
+045-048 exp.x
+045-048 fmod.y
+045-048 log.x
+045     @PRINTF_L32D_870FPFPF.@SCRATCH4
+046     @PRINTF_L32D_870FPFPF.@SCRATCH5
+047     @PRINTF_L32D_870FPFPF.@SCRATCH6
+048     @PRINTF_L32D_870FPFPF.@SCRATCH7
+049-04C fmod.i
+049-04C log.y
+049-04C exp.y
+049     @PRINTF_L32D_870FPFPF.@SCRATCH8
+04A-04D @DIV3232.P1
+04A-04D @FTOSD.P2
+04A     lcd_putc.c
+04B     @delay_ms2.P1
+04B     lcd_gotoxy.x
+04C     lcd_gotoxy.y
+04D-050 exp.res
+04D     lcd_gotoxy.address
+04D-050 log.res
+04D     fmod.@SCRATCH1
+04E-051 @DIV3232.P1
+04E     fmod.@SCRATCH2
+04E     lcd_gotoxy.@SCRATCH1
+04E     @FTOSD.@SCRATCH1
+04F     lcd_send_byte.address
+04F     fmod.@SCRATCH3
+050     lcd_send_byte.n
+050     fmod.@SCRATCH4
+051     lcd_read_byte.low
+051-054 log.r
+051-054 ceil.x
+051-054 floor.x
+051-054 exp.r
+051     lcd_send_byte.@SCRATCH1
+052     lcd_send_nibble.n
+052     lcd_read_byte.high
+052     @DIV3232.@SCRATCH1
+053     lcd_read_nibble.n
+053     @delay_ms1.P1
+053     _CoPhimNhaHayChua.@SCRATCH1
+053     _QuetPhimNhan.@SCRATCH1
+053     lcd_read_byte.@SCRATCH1
+053     @DIV3232.@SCRATCH2
+054     _QuetCot.TenCot
+054     lcd_read_nibble.@SCRATCH1
+054     @DIV3232.@SCRATCH3
+055-058 CEIL_FLOOR.x
+055     exp.n
+055-058 log.y2
+055     @DIV3232.@SCRATCH4
+056.0   exp.s
+056     @DIV3232.@SCRATCH5
+057     exp.@SCRATCH1
+058     exp.@SCRATCH2
+059     CEIL_FLOOR.n
+059     log.n
+059     exp.@SCRATCH3
+05A-05D CEIL_FLOOR.y
+05A     exp.@SCRATCH4
+05A     log.@SCRATCH1
+05B-05C @SITOF.P1
+05B     log.@SCRATCH2
+05C     log.@SCRATCH3
+05D     log.@SCRATCH4
+05E-061 CEIL_FLOOR.res
+05E-061 @DIVFF.P1
+062-063 CEIL_FLOOR.l
+062-065 @DIVFF.P1
+064.0   CEIL_FLOOR.s
+065-068 @MULFF.P1
+065-068 @FLT.P2
+065-068 @SFTOI.P3
+065     CEIL_FLOOR.@SCRATCH1
+066     CEIL_FLOOR.@SCRATCH2
+066     @DIVFF.@SCRATCH1
+067     CEIL_FLOOR.@SCRATCH3
+067     @DIVFF.@SCRATCH2
+068     CEIL_FLOOR.@SCRATCH4
+068     @DIVFF.@SCRATCH3
+069-06C @ADDFF.P1
+069-06C @FLT.P2
+069-06A @ITOF.P3
+069-06C @MULFF.P4
+069     @DIVFF.@SCRATCH4
+06A     @DIVFF.@SCRATCH5
+06B     @DIVFF.@SCRATCH6
+06D-070 @ADDFF.P1
+06D     @FLT.@SCRATCH1
+06D     @MULFF.@SCRATCH1
+06E     @FLT.@SCRATCH2
+06E     @MULFF.@SCRATCH2
+06F     @MULFF.@SCRATCH3
+070     @MULFF.@SCRATCH4
+071     @MULFF.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+0A0     @ADDFF.@SCRATCH1
+0A1     @ADDFF.@SCRATCH2
+0A2     @ADDFF.@SCRATCH3
+0A3     @ADDFF.@SCRATCH4
+0A4     @ADDFF.@SCRATCH5
+0A5     @ADDFF.@SCRATCH6
+0A6     @ADDFF.@SCRATCH7
+0A7     @ADDFF.@SCRATCH8
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  @const891.call
+000012  @const899.call
+000017  @const911.call
+00001A  @const914.call
+00001F  @delay_ms2
+000034  lcd_send_nibble
+00005F  lcd_read_nibble
+000090  lcd_send_byte
+000093  lcd_read_byte
+0000E7  lcd_init
+000121  lcd_gotoxy
+000144  lcd_putc
+000168  _KhoiTaoBanPhim
+000189  @PSTRINGC7_870
+0001DF  @PSTRINGR_870
+0001F7  _CoPhimNhaHayChua
+00023E  _QuetCot
+000288  @goto36923
+000291  _QuetPhimNhan
+0002C8  @delay_ms1
+00032A  _ReturnStart
+00033E  @MULFF
+0003B3  @ITOF
+0003D0  _CharToNumber
+0003D8  @ADDFF
+000549  @FLT
+000588  @DIV3232
+0005D7  @PRINTF_L32D_870FPFPF
+0005FE  @FTOSD
+0006B7  @DIVFF
+000781  @SFTOI
+0007A0  @SITOF
+000800  CEIL_FLOOR
+0009BF  fmod
+000A1F  ceil
+000A4E  floor
+000A89  log
+000C4F  exp
+000E52  pow
+001000  @cinit1
+001000  MAIN
+001016  @cinit2
+
+Project Directory:
+    D:\Project KTMT\Calculator\
+
+Project Files:
+    main.c                                                  [09-Apr-23 16:36  CRC=8D66FF45]
+    main.h                                                  [08-Apr-23 22:47  CRC=D872A938]
+    C:\Program Files (x86)\PICC\Devices\16F877A.h           [21-Oct-22 11:02  CRC=6A06E202]
+    keypad5x5.h                                             [05-Apr-23 04:18  CRC=5E513A43]
+    lcd.h                                                   [03-Apr-23 09:32  CRC=0DB515E7]
+    C:\Program Files (x86)\PICC\Drivers\math.h              [05-May-20 13:57  CRC=02232397]
+
+Source signature=402D21D7
+Program memory checksum=0000
+Hex file CRC=00CB
+
+Units:
+    D:\Project KTMT\Calculator\main (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
